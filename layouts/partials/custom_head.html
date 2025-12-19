@@ -1,0 +1,130 @@
+<!-- A partial to be overwritten by the user.
+     Its content will appear before the closing </head>-tag -->
+
+
+<!-- Custom CSS via inline styles
+     Vintage Cinema Color Scheme for CineForum -->
+<style>
+:root {
+    /* === Vintage Cinema Color Palette === */
+    
+    /* Cover / Landing area - Warm sepia tones */
+    --cover-text-color: #3d2817!important;              /* Deep warm brown */
+    --highlight: #d4a574!important;                      /* Vintage gold/tan */
+    --highlight-contrast: #3d2817!important;
+    --highlight-inverse: #3d2817!important;
+    --highlight-inverse-contrast: #f5e6d3!important;
+    
+    /* Title guard - Soft cream overlay */
+    --cover-title-and-description-guard-bg-color: rgba(245, 230, 211, 0.85)!important;
+    --cover-title-text-shadow: #f5e6d3 0px 0px 7px!important;
+    
+    /* Sticky navigation - Vintage poster yellow */
+    --sticky-menu-text-color: #e8c77c!important;
+    
+    /* Light sections - Cream/beige paper tone */
+    --section-light-text-color: #3d2817!important;      /* Deep warm brown text */
+    --section-light-bg-color: #f5e6d3!important;        /* Cream/aged paper */
+    
+    /* Dark sections - Rich burgundy cinema curtain */
+    --section-dark-text-color: #f5e6d3!important;       /* Cream text on dark */
+    --section-dark-bg-color: #6b2737!important;         /* Deep burgundy/wine */
+    
+    /* Quotes and code - Warm sepia accents */
+    --section-uni-quote: #8b6f47!important;             /* Warm brown for quotes */
+    --section-uni-code-bg-color: #ebe0cf!important;     /* Slightly darker cream */
+    
+    /* Single pages */
+    --single-page-text-color: #3d2817!important;
+    --single-page-bg-color: #f5e6d3!important;
+    
+    /* Footer - Classic dark cinema */
+    --footer-color-background: #2a1810!important;       /* Very dark brown/black */
+    --footer-color: #d4a574!important;                  /* Vintage gold text */
+    
+    /* List styling - film reel icon */
+    --ul-li-icon: fa-film!important;
+}
+
+
+/* Override header background image with pattern */
+#site-head {
+    background-color: #1b1b1b !important;
+    background-image: radial-gradient(rgba(255,255,255,0.03) 1px, transparent 1px) !important;
+    background-size: 3px 3px !important;
+}
+
+/* Center film names in "Cosa ti sei perso" section */
+#cosa-ti-sei-perso .post-content {
+    text-align: center;
+}
+
+#cosa-ti-sei-perso .post-content p,
+#cosa-ti-sei-perso .post-content img {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Add spacing between films */
+#cosa-ti-sei-perso .post-content p {
+    margin-bottom: 5rem;
+}
+
+#cosa-ti-sei-perso .post-content img {
+    margin-bottom: 0.5rem;
+    margin-top: 2.5rem;
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+/* Center film names in "Programmazione" section */
+#programmazione .post-content {
+    text-align: center;
+}
+
+#programmazione .post-content p,
+#programmazione .post-content img {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+     max-width: 500px;   
+    width: 100%;
+    height: auto;
+}
+
+/* Add spacing between films in Programmazione */
+#programmazione .post-content p {
+    margin-bottom: 5rem;
+}
+
+#programmazione .post-content img {
+    margin-bottom: 0.5rem;
+    margin-top: 2.5rem;
+}
+</style>
+
+
+
+<!-- Custom CSS via "custom.css"-file
+     If you would rather place your custom CSS into
+     a separate file, create a "custom.css" in your
+     local "static/css"-directory. Then add a <link>-tag
+     referencing your "custom.css" like so: -->
+
+<!-- <link rel="stylesheet" href='{{ "css/custom.css" | absURL }}'> -->
+
+<!-- Custom CSS: Color Codes
+     You may checkout https://htmlcolorcodes.com/ to get those
+     weird color codes (like "#22343A") ;-). -->
+
+<!-- Custom link-tags for different icons
+     Generated via https://favicon.io/favicon-generator/ -->
+
+{{ with resources.Get "images/apple-touch-icon.png" }}<link rel="apple-touch-icon" sizes="180x180" href="{{ .RelPermalink }}" />{{ end }}
+{{ with resources.Get "images/favicon.svg" }}<link rel="icon" type="image/svg+xml" href="{{ .RelPermalink }}" />{{ end }}
+{{ range seq 9 4 }}{{ $size := pow 2 . }}{{ $file := replace "images/favicon-##x##.png" "##" $size }}{{ with resources.Get $file }}
+<link rel="icon" type="{{ .MediaType.Type }}" sizes="{{- $size -}}x{{- $size -}}" href="{{ .RelPermalink }}" />{{ end }}{{ end }}

@@ -1,0 +1,25 @@
+# Hugo generated files
+public/
+resources/_gen/
+
+# Hugo modules
+.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor files
+*.code-workspace
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+
+# Example site (not needed for your site)
+exampleSite/
+
+# Lock files (optional, but recommended for consistency)
+*.lock
+package-lock.json
