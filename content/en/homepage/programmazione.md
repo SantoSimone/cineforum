@@ -6,7 +6,7 @@ header_menu: true
 
 Qui troverai i prossimi film che saranno proiettati nei prossimi eventi, le date sono in continuo aggiornamento, stay tuned!
 
-##### Film a sorpresa (02-01-2026)
+##### Film a sorpresa
 
 ![Film a sorpresa](/images/film-a-sorpresa.png)
 

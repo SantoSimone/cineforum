@@ -21,3 +21,7 @@ Mentre tu eri impegnato a guardare l'ennesima puntata della tua serie preferita,
 ##### La città proibita (14/12/2025)
 
 ![La città proibita](/images/la-citta-proibita.jpeg)
+
+##### Si alza il vento (02/01/2025)
+
+![Si alza il vento](/images/si-alza-il-vento.jpeg)
