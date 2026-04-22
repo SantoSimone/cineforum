@@ -25,3 +25,7 @@ Mentre tu eri impegnato a guardare l'ennesima puntata della tua serie preferita,
 ##### Si alza il vento (02/01/2025)
 
 ![Si alza il vento](/images/si-alza-il-vento.jpeg)
+
+##### Twilight (23/01/2026)
+
+![Twilight](/images/twilight.jpeg)
